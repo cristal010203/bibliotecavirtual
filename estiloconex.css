@@ -1,0 +1,30 @@
+[Huawei] display current-configuration // Muestra la configuración actual.
+[Huawei] display interfaces // Muestra información de la interfaz.
+[Huawei] display vlan all // Muestra información de vlan.
+[Huawei] display version // Muestra la información de la versión.
+ 
+[Huawei] super password // Cambia la contraseña de un usuario privilegiado.
+[Huawei] sysname // Cambia el nombre del Switch.
+[Huawei] interface ethernet 0/0/1 // Ingresa a la vista de la interface.
+[Huawei] interface vlanif x // Ingresa a la vista de la interface de la Vlan.
+[Huawei-Vlan-interfacex] ip address 10.65.1.1 255.255.0.0 // Configura la dirección IP de la VLAN.
+ 
+[Huawei] ip route-static 0.0.0.0 0.0.0.0 10.65.1.2 // Ruta estática.
+ 
+[Huawei] user-interface vty 0 4 // Accede al terminal virtual.
+[Huawei-ui-vty0-4] authentication-mode password // Configuración del modo de contraseña
+[Huawei-ui-vty0-4] set authentication-mode password simple 222 // Estableciendo una contraseña
+[Huawei-ui-vty0-4] user privilege level 3 // Nivel de usuario
+ 
+[Huawei] interface ethernet 0/0/1 // Entrar en el modo de puerto.
+[Huawei] int e0/0/1 // Entrar en el modo de puerto.
+[Huawei-Ethernet0/1] duplex {half|full|auto} // Configurando el estado de trabajo de un puerto.
+[Huawei-Ethernet0/1] speed {10|100|auto} / Configurando la velocidad de trabajo de un puerto.
+[Huawei-Ethernet0/1] flow-control // Configuración de control de flujo de puerto
+[Huawei-Ethernet0/1] port link-type {trunk|access|hybrid} // Para establecer el modo de trabajo de un puerto
+[Huawei-Ethernet0/1] port access vlan 3 // El puerto actual se agrega a la VLAN.
+[Huawei-Ethernet0/2] port trunk allow-pass vlan {ID|All} // Establecer la VLAN permitida por el troncal.
+[Huawei-Ethernet0/3] port trunk pvid vlan 3 // Configuración del PVID de un puerto troncal
+[Huawei-Ethernet0/1] undo shutdown // Activar un puerto
+[Huawei-Ethernet0/1] shutdown // Deshabilitar el puerto.
+[Huawei-Ethernet0/1] quit // Salir
